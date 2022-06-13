@@ -1,0 +1,9 @@
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\bin\Debug\Dapper.dll
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\bin\Debug\Dapper.xml
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

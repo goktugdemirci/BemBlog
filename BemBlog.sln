@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BemBlog", "BemBlog\BemBlog.csproj", "{47F21F4D-40C8-479E-965F-9524D9EA81EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{3613944A-6E23-4582-A672-76BB551B28A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47F21F4D-40C8-479E-965F-9524D9EA81EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47F21F4D-40C8-479E-965F-9524D9EA81EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47F21F4D-40C8-479E-965F-9524D9EA81EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47F21F4D-40C8-479E-965F-9524D9EA81EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3613944A-6E23-4582-A672-76BB551B28A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3613944A-6E23-4582-A672-76BB551B28A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3613944A-6E23-4582-A672-76BB551B28A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3613944A-6E23-4582-A672-76BB551B28A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F87D776-6B0C-4905-9153-C29CA68CA334}
+	EndGlobalSection
+EndGlobal

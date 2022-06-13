@@ -1,0 +1,93 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #FEFEFE;
+    font-family: 'Lalezar', cursive;
+}
+
+.tasiyici {
+   min-height :500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    border: 3px ridge #13ACBA;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    min-height: 300px;
+}
+
+    .panel h3 {
+        margin-top: 20px;
+        color: #F1612B;
+    }
+
+.hata {
+    background-color: #F25D50;
+    min-height: 20px;
+    padding: 10px;
+    color: #F7F7F7;
+    font-size: 14pt;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.textbox[type=text] {
+    text-align: center;
+    font-size: 16pt;
+    width: 270px;
+    background-color: #F6B5A3;
+    color: #FEFEFE;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.textbox[type=password] {
+    text-align: center;
+    font-size: 16pt;
+    width: 270px;
+    background-color: #F6B5A3;
+    color: #FEFEFE;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.buton {
+    background-color: #F7F7F7;
+    margin-top: 15px;
+    padding: 12px;
+    display: block;
+    color: #13ACBA;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20pt;
+}
+
+    .buton:hover {
+        background-color: #13ACBA;
+        color: #F1612B;
+    }
+
+.link {
+    text-decoration: none;
+    color: #F1612B;
+    font-size: 15pt;
+    margin-top: 60px;
+}
+
+    .link:hover {
+        text-decoration: underline;
+        color: #13ACBA;
+    }
