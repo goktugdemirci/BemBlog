@@ -5,12 +5,30 @@
 <html>
 <head runat="server">
     <title></title>
+    <link href="CSS/Default.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="header">
+            <a href="AdminDefault.aspx">
+                <img src="../Images/bem.png" /></a>
+            <label>GELECEK BİLİŞİM'DE</label>
+            <div class="info" style="color:#29B4C1">
+                <asp:LinkButton ID="lbtn_girisYap" runat="server" Text="Giriş Yap" OnClick="lbtn_girisYap_Click" style="border-radius: 0px 20px;"/>
+                &nbsp;|&nbsp;
+                <asp:LinkButton ID="lbtn_uyeOl" runat="server" Text="Üye Ol" OnClick="lbtn_uyeOl_Click" />
+            </div>
+        </div>
+                <div class="menuBar">
+            <ul>
+                <a href="YoneticiEkle.aspx">
+                    <li class="menuItem1">Yönetici Ekle</li>
+                </a>
+            </ul>
+        </div>
+        <div class="content">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

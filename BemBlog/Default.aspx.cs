@@ -7,19 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace BemBlog
 {
-    public partial class MasterPage : System.Web.UI.MasterPage
+    public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void lbtn_uyeOl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void lbtn_girisYap_Click(object sender, EventArgs e)
         {
 
         }

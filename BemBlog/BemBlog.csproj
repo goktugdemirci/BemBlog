@@ -78,6 +78,8 @@
     <Content Include="Admin\YoneticiIndex.aspx" />
     <Content Include="CSS\AdminDefault.css" />
     <Content Include="CSS\AdminLogin.css" />
+    <Content Include="CSS\Default.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Images\bem.png" />
     <Content Include="Images\settings.png" />
     <Content Include="Web.config" />
@@ -152,6 +154,13 @@
     </Compile>
     <Compile Include="Admin\YoneticiIndex.aspx.designer.cs">
       <DependentUpon>YoneticiIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

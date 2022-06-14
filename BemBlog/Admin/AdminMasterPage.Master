@@ -12,7 +12,8 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
-            <img src="../Images/bem.png" />
+            <a href="AdminDefault.aspx"><img src="../Images/bem.png" /></a>
+            
             <div class="info">
                 <asp:Label ID="lbl_info" runat="server" />&nbsp;|&nbsp;
                 <asp:LinkButton ID="lbtn_exit" runat="server" Text="Çıkış" OnClick="lbtn_exit_Click" />
@@ -20,12 +21,8 @@
         </div>
         <div class="menuBar">
             <ul>
-                <a href="AdminDefault.aspx">
-                    <li class="menuItem1">Anasayfa</li>
-                </a>
-
                 <a href="YoneticiEkle.aspx">
-                    <li class="menuItem">Yönetici Ekle</li>
+                    <li class="menuItem1">Yönetici Ekle</li>
                 </a>
 
                 <a href="KategoriEkle.aspx">
@@ -50,6 +47,10 @@
 
                 <a href="#">
                     <li class="menuItem">Makale Listesi</li>
+                </a>
+
+                <a href="#">
+                    <li class="menuItem">Yorumlar Listesi</li>
                 </a>
             </ul>
         </div>

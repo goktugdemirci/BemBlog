@@ -51,10 +51,10 @@ body {
     }
 
         .info a:hover {
-            padding: 10px;
+            padding: 10px 0px;
             color: #F1632E;
             border: 2px solid #F1632E;
-            border-radius: 20px;
+            border-radius: 20px 0px;
         }
 
 .menuBar {
@@ -92,7 +92,7 @@ body {
 }
 
 .menuItem1 {
-    margin-left: 200px;
+    margin-left:100px;
     color: #30B6C2;
     font-weight: 300;
     padding: 10px;
