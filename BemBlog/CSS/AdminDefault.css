@@ -92,7 +92,7 @@ body {
 }
 
 .menuItem1 {
-    margin-left:100px;
+    margin-left: 100px;
     color: #30B6C2;
     font-weight: 300;
     padding: 10px;
@@ -157,14 +157,15 @@ body {
 .formContainer {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 80%;
     padding: 20px;
     border: 1px solid #A6A4A6;
     border-radius: 10px;
+    min-height:500px;
 }
 
     .formContainer label {
-        font-family: 'Bebas Neue', cursive;
+        font-family: 'Comic Sans MS', cursive;
         font-size: 15pt;
         color: #3F3F3F;
     }
@@ -194,7 +195,7 @@ body {
 }
 
 .textbox[type=password]:focus {
-    border: 3px solid #555;
+    border: 3px dashed #555;
 }
 
 .formButton {
@@ -214,14 +215,18 @@ body {
         opacity: 1;
     }
 
+.FloatClear:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
 .yarimForm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top:50px;
     width: 40%;
     min-height: 400px;
     border: 3px solid #F1612B;
     border-radius: 12px;
-    margin-left: 5%;
     float:left;
 }
