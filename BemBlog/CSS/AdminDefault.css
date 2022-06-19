@@ -107,11 +107,11 @@ body {
 }
 
 .table {
-    width: 85%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     border: 2px ridge #B76A64;
-    background-color: #FCF0BE;
+    background-color: ghostwhite;
     border-radius: 11px;
     opacity: 0.8;
 }
@@ -125,7 +125,7 @@ body {
     .table tr td {
         text-align: center;
         padding: 8px;
-        border-bottom: 1px solid silver;
+        border-bottom: 1px ridge silver;
     }
 
 .silButton {
@@ -223,10 +223,21 @@ body {
 }
 
 .yarimForm {
-    margin-top:50px;
+    padding:20px;
+    margin-top:20px;
     width: 40%;
     min-height: 400px;
     border: 3px solid #F1612B;
     border-radius: 12px;
     float:left;
+}
+.hata {
+    background-color: #F25D50;
+    min-height: 20px;
+    padding: 10px;
+    color: #F7F7F7;
+    font-size: 14pt;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 15px;
 }

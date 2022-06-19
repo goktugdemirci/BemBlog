@@ -10,7 +10,10 @@ namespace DataAccessLayer
     {
         public int ID { get; set; }
         public int KategoriID { get; set; }
+        public string KategoriAdi { get; set; }
         public int YoneticiID { get; set; }
+        public string Adi { get; set; }
+        public string YetkiAdi { get; set; }
         public string Baslik { get; set; }
         public string Ozet { get; set; }
         public string TamIcerik { get; set; }

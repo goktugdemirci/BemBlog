@@ -346,6 +346,80 @@ namespace DataAccessLayer
                 dbConnection.Close();
             }
         }
+        public List<Makale> MakaleListele()
+        {
+            try
+            {
+                dbConnection.Open();
+                List<Makale> makaleler = dbConnection.Query<Makale>("SELECT Mak.ID,Mak.KategoriID,Kat.KategoriAdi,Mak.YoneticiID,Yon.Adi,Yet.YetkiAdi,Mak.Baslik,Mak.Ozet,Mak.TamIcerik,Mak.ThumbnailAdi,Mak.TamResimAdi,Mak.YuklemeTarih,Mak.Okundu,Mak.IsDeleted FROM Makaleler AS Mak JOIN Yoneticiler AS Yon ON Mak.YoneticiID = Yon.ID JOIN Kategoriler AS Kat ON Mak.KategoriID = Kat.ID JOIN Yetkiler AS Yet ON Yon.YetkiID = Yet.ID").ToList();
+                return makaleler;
+
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+        public bool MakaleGuncelle(Makale m)
+        {
+            try
+            {
+                dbConnection.Open();
+                dbConnection.Execute("UPDATE Makaleler SET KategoriID=@KategoriID,Baslik=@Baslik,Ozet=@Ozet,TamIcerik= @TamIcerik,ThumbnailAdi= @ThumbnailAdi,TamResimAdi= @TamResimAdi,IsDeleted = @IsDeleted WHERE ID = @ID", m);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+        public Makale GetMakale(int id)
+        {
+            try
+            {
+                dbConnection.Open();
+                Makale m = dbConnection.QueryFirst<Makale>("SELECT ID, KategoriID,YoneticiID,Baslik,Ozet,TamIcerik,ThumbnailAdi,TamResimAdi,IsDeleted FROM Makaleler WHERE ID = @id", new { id });
+                return m;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+        public bool MakaleSil(int id)
+        {
+            try
+            {
+                dbConnection.Open();
+                dbConnection.Execute("UPDATE Makaleler SET IsDeleted = 1 WHERE ID = @id", new { id });
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+
         #endregion
     }
 }

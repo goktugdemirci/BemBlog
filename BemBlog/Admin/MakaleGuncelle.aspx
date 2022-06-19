@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="MakaleEkle.aspx.cs" Inherits="BemBlog.Admin.MakaleEkle" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="MakaleGuncelle.aspx.cs" Inherits="BemBlog.Admin.MakaleGuncelle" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="ckeditor/ckeditor.js"></script>
 </asp:Content>
@@ -21,12 +20,14 @@
             
             <div>
                 <label>Liste Görseli</label>
+                <asp:Image ID="img_min" runat="server" Style="width: 80px;" />
                 <asp:FileUpload ID="fu_min" runat="server" style="float:right"/>
             </div>
             <br />
             
             <div>
                 <label>İçerik Görseli</label>
+                <asp:Image ID="img_max" runat="server" Style="width: 80px;" />
                 <asp:FileUpload ID="fu_max" runat="server" style="float:right"/>
             </div>
             <br />
@@ -39,7 +40,7 @@
             <br />
             
             <div style="width: 200px; margin-left: 190px;">
-                <asp:LinkButton ID="lbtn_makaleEkle" runat="server" CssClass="formButton" Text="Makale Ekle" OnClick="lbtn_makaleEkle_Click"></asp:LinkButton>
+                <asp:LinkButton ID="lbtn_makaleEkle" runat="server" CssClass="formButton" Text="Makale Güncelle" OnClick="lbtn_makaleEkle_Click"></asp:LinkButton>
             </div>
         </div>
         <div class="yarimForm" style="margin-left: 50px">
@@ -57,5 +58,4 @@
             </div>
         </div>
     </div>
-
 </asp:Content>

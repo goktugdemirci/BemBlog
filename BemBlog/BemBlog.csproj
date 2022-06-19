@@ -250,6 +250,8 @@
     <Content Include="Admin\KategoriGuncelle.aspx" />
     <Content Include="Admin\KategoriIndex.aspx" />
     <Content Include="Admin\MakaleEkle.aspx" />
+    <Content Include="Admin\MakaleGuncelle.aspx" />
+    <Content Include="Admin\MakaleIndex.aspx" />
     <Content Include="Admin\YoneticiEkle.aspx" />
     <Content Include="Admin\YoneticiGiris.aspx" />
     <Content Include="Admin\YoneticiGuncelle.aspx" />
@@ -259,6 +261,7 @@
     <Content Include="CSS\Default.css" />
     <Content Include="Default.aspx" />
     <Content Include="Images\bem.png" />
+    <Content Include="Images\noimage.png" />
     <Content Include="Images\settings.png" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -304,6 +307,20 @@
     </Compile>
     <Compile Include="Admin\MakaleEkle.aspx.designer.cs">
       <DependentUpon>MakaleEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MakaleGuncelle.aspx.cs">
+      <DependentUpon>MakaleGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MakaleGuncelle.aspx.designer.cs">
+      <DependentUpon>MakaleGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MakaleIndex.aspx.cs">
+      <DependentUpon>MakaleIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MakaleIndex.aspx.designer.cs">
+      <DependentUpon>MakaleIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\YoneticiEkle.aspx.cs">
       <DependentUpon>YoneticiEkle.aspx</DependentUpon>

@@ -4,14 +4,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="formContainer">
-        <asp:Panel runat="server" ID="pnl_info" Visible="false">
+        <asp:Panel runat="server" ID="pnl_info" Visible="false" CssClass="hata">
             <asp:Label runat="server" ID="lbl_message"></asp:Label>
         </asp:Panel>
         <div>
             <table class="table">
                 <tr>
                     <td>
-                        <asp:TextBox ID="tb_adi" runat="server" CssClass="textbox" placeholder="Yönetici Adı Giriniz"></asp:TextBox>
+                        <asp:TextBox ID="tb_adi" runat="server" CssClass="textbox" Placeholder="Yonetici Adi"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>

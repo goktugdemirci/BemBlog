@@ -45,7 +45,7 @@
                     <li class="menuItem">Kategori Listesi</li>
                 </a>
 
-                <a href="#">
+                <a href="MakaleIndex.aspx">
                     <li class="menuItem">Makale Listesi</li>
                 </a>
 
