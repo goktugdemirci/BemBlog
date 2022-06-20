@@ -97,7 +97,7 @@
                 <td><%#Eval("KategoriAdi") %></td>
                 <td><%#Eval("Baslik") %></td>
                 <td><%#Eval("YuklemeTarih") %></td>
-                <td><%# (string)Eval("IsDeleted") =="False" ? "Evet" :"Hayır"%></td>
+                <td><%# (bool)Eval("IsDeleted") ==false ? "Evet" :"Hayır"%></td>
                 <td>
                     <asp:LinkButton ID="lbtn_makaleSil" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="sil">Sil</asp:LinkButton>&nbsp;|&nbsp;
                     <a href='MakaleGuncelle.aspx?makid=<%# Eval("ID") %>' class="guncButton">Güncelle</a>

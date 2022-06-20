@@ -15,8 +15,11 @@ namespace BemBlog.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddl_category.DataSource = dm.KategoriListele(false);
-            ddl_category.DataBind();
+            if (!IsPostBack)
+            {
+                ddl_category.DataSource = dm.KategoriListele(false);
+                ddl_category.DataBind();
+            }
         }
 
         protected void lbtn_makaleEkle_Click(object sender, EventArgs e)

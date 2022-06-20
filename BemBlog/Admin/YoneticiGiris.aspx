@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div class="tasiyici">
             <div class="panel">
-                <img src="../Images/bem.png" />
+                <img src="../Images/bem.png" alt="resimYazisi"/>
                 <h3 style=" font-size:30pt;">Yönetici Girişi</h3>
                 <hr style="color:#F7F7F7; margin-top:15px;" />
                 <asp:Panel ID="pnl_mesaj" runat="server" CssClass="hata" Visible="false">

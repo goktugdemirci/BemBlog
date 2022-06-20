@@ -13,6 +13,7 @@ namespace BemBlog.Admin
         DataModel dm = new DataModel();
         protected void Page_Load(object sender, EventArgs e)
         {
+
             lv_makaleler.DataSource = dm.MakaleListele();
             lv_makaleler.DataBind();
         }

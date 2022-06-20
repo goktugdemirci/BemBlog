@@ -13,9 +13,13 @@
                 <asp:PlaceHolder ID="ItemPlaceHolder" runat="server"></asp:PlaceHolder>
             </table>
         </LayoutTemplate>
+        <%--snake_case_arada_var
+        kebab-case-arada-var
+        PascalCase
+        camelCase--%>
         <ItemTemplate>
             <tr>
-                <td><%#Eval("KategoriAdi") %></td>
+                <td><%#Eval("KategoriAdi")%></td>
                 <td>
                     <asp:LinkButton ID="lbtn_deletecomment" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="sil">Sil</asp:LinkButton>&nbsp;|&nbsp;
                     <a href='KategoriGuncelle.aspx?katid=<%# Eval("ID") %>' class="guncButton">Güncelle</a>

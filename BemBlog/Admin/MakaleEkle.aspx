@@ -33,7 +33,7 @@
             
             <div>
                 <label>Makale Yayına Alınsın :</label>
-                &nbsp &nbsp &nbsp &nbsp &nbsp 
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                         <asp:CheckBox ID="cb_confirm" runat="server" Text="Onaylıyorum." Checked="false" />
             </div>
             <br />
@@ -46,12 +46,12 @@
             <div>
                 <label>Liste Görünümü</label>
                 <br />
-                <asp:TextBox ID="tb_list" runat="server" TextMode="MultiLine" MaxLength="300" CssClass="textbox" style="min-height:100px; width:100%"></asp:TextBox>
+                <asp:TextBox ID="tb_list" runat="server" TextMode="MultiLine" MaxLength="256" CssClass="textbox" style="min-height:100px; width:100%"></asp:TextBox>
             </div>
             <div>
                 <label>Tam Görünümü</label><br />
                 <asp:TextBox ID="tb_tam" runat="server" TextMode="MultiLine" CssClass="textbox"></asp:TextBox>
-                <script ValidateRequest="false">
+                <script>
                     CKEDITOR.replace('ctl00$ContentPlaceHolder1$tb_tam');
                 </script>
             </div>

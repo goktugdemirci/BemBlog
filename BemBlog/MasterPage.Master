@@ -15,22 +15,45 @@
             <a href="AdminDefault.aspx">
                 <img src="../Images/bem.png" /></a>
             <label>GELECEK BİLİŞİM'DE</label>
-            <div class="info" style="color:#29B4C1">
-                <asp:LinkButton ID="lbtn_girisYap" runat="server" Text="Giriş Yap" OnClick="lbtn_girisYap_Click" style="border-radius: 0px 20px;"/>
-                &nbsp;|&nbsp;
-                <asp:LinkButton ID="lbtn_uyeOl" runat="server" Text="Üye Ol" OnClick="lbtn_uyeOl_Click" />
+            <div class="User">
+                <asp:Panel ID="pnl_in" runat="server" Visible="false" Style="margin-top: 30px; float: right;">
+                    <label>Welcome</label>
+                    <asp:Label ID="lbl_user" runat="server" Style="font-family: 'Bebas Neue', cursive;"></asp:Label>
+                    <asp:LinkButton ID="lbtn_exit" runat="server" OnClick="lbtn_exit_Click">EXIT</asp:LinkButton>
+                </asp:Panel>
+                <asp:Panel ID="pnl_out" runat="server" Visible="true" Style="margin-top: 30px; float: right;">
+                    <a href="UyeOl.aspx">REGISTER</a>
+                    <a href="UyeGiris.aspx">LOG-IN</a>
+                </asp:Panel>
             </div>
         </div>
-                <div class="menuBar">
-            <ul>
-                <a href="YoneticiEkle.aspx">
-                    <li class="menuItem1">Yönetici Ekle</li>
-                </a>
-            </ul>
-        </div>
-        <div class="content">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+        <div class="MainContainer">
+            <div class="CategoryContainer">
+                <ul>
+                    <asp:Repeater ID="rp_categories" runat="server">
+                        <ItemTemplate>
+                            <div>
+                                <a href='Default.aspx?katid=<%# Eval("ID") %>'>
+                                    <li><%# Eval("KategoriAdi") %></li>
+                                </a>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ul>
+            </div>
+            <div class="ContentContainer">
+                <div class="Article">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="About">
+                    <h3>About Us</h3>
+                    <hr />
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum odio dolor. Etiam nec blandit diam. Suspendisse eget accumsan tellus. Donec gravida at felis eu fringilla. Nunc ut scelerisque ligula, sed dignissim ex. 
+                    <br />
+                </div>
+            </div>
         </div>
     </form>
 </body>
