@@ -7,20 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BemBlog
+namespace BemBlog.Admin
 {
 
 
-    public partial class Default
+    public partial class KullaniciIndex
     {
 
         /// <summary>
-        /// lv_articles control.
+        /// lv_kullanicilar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lv_articles;
+        protected global::System.Web.UI.WebControls.ListView lv_kullanicilar;
     }
 }

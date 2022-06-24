@@ -12,24 +12,22 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
-            <a href="AdminDefault.aspx">
+            <a href="Default.aspx">
                 <img src="../Images/bem.png" /></a>
-            <label>GELECEK BİLİŞİM'DE</label>
+            <label></><\> 💻 ⌨️ 🖥 GELECEK BİLİŞİM'DE 🖥 ⌨️ 💻 <\></label>
             <div class="User">
                 <asp:Panel ID="pnl_in" runat="server" Visible="false" Style="margin-top: 30px; float: right;">
                     <label>Welcome</label>
-                    <asp:Label ID="lbl_user" runat="server" Style="font-family: 'Bebas Neue', cursive;"></asp:Label>
+                    <asp:Label ID="lbl_user" runat="server"></asp:Label>
                     <asp:LinkButton ID="lbtn_exit" runat="server" OnClick="lbtn_exit_Click">EXIT</asp:LinkButton>
                 </asp:Panel>
                 <asp:Panel ID="pnl_out" runat="server" Visible="true" Style="margin-top: 30px; float: right;">
-                    <a href="UyeOl.aspx">REGISTER</a>
-                    <a href="UyeGiris.aspx">LOG-IN</a>
+                    <a href="GirisYap.aspx">Giriş Yap</a>
+                    <a href="YeniKayit.aspx">Kayıt Ol</a>
                 </asp:Panel>
             </div>
-        </div>
-        <div class="MainContainer">
-            <div class="CategoryContainer">
-                <ul>
+            <div class="CategoryContainer ">
+                <ul style="margin-left: 200px">
                     <asp:Repeater ID="rp_categories" runat="server">
                         <ItemTemplate>
                             <div>
@@ -41,18 +39,12 @@
                     </asp:Repeater>
                 </ul>
             </div>
+        </div>
+        <div class="MainContainer">
+
             <div class="ContentContainer">
-                <div class="Article">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
-                </div>
-                <div class="About">
-                    <h3>About Us</h3>
-                    <hr />
-                    <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum odio dolor. Etiam nec blandit diam. Suspendisse eget accumsan tellus. Donec gravida at felis eu fringilla. Nunc ut scelerisque ligula, sed dignissim ex. 
-                    <br />
-                </div>
             </div>
         </div>
     </form>

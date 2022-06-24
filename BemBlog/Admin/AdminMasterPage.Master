@@ -37,7 +37,7 @@
                     <li class="menuItem">Yöneticiler Listesi</li>
                 </a>
 
-                <a href="#">
+                <a href="KullaniciIndex.aspx">
                     <li class="menuItem">Kullanıcılar Listesi</li>
                 </a>
 

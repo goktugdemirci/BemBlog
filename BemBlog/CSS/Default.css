@@ -4,70 +4,31 @@
 }
 
 body {
+    font-size: 15pt;
+    color: #002F2F;
 }
 
 .header {
-    font-family: 'Uncial Antiqua', cursive;
-    min-height: 80px;
+    position: fixed;
+    min-height: 50px;
     background-color: #FFFFFF;
     width: 100%;
 }
 
     .header img {
         float: left;
-        width: 15%;
+        width: 13%;
         height: 80px;
-    }
-
-    .header h1 {
-        margin-left: 50px;
-        float: left;
-        margin-top: 20px;
-        color: #F2F2F2;
-    }
-
-    .header h3 {
-        float: left;
-        margin-top: 30px;
-        color: #F2F2F2;
     }
 
     .header label {
         float: left;
-        margin-left: 120px;
-        font-family: 'Uncial Antiqua', cursive;
-        color: #F1612B;
-        margin-top: 30px;
+        color: #046380;
+        margin-top: 25px;
         font-size: 20pt;
     }
 
-.info {
-    float: right;
-    margin-right: 50px;
-    margin-top: 30px;
-}
-
-    .info label {
-        text-decoration: none;
-        color: #F1612B;
-        font-weight: 900;
-    }
-
-    .info a {
-        font-size: 14pt;
-        text-decoration: none;
-        color: #29B4C1;
-    }
-
-        .info a:hover {
-            padding: 5px 2px;
-            color: #F1632E;
-            border: 2px solid #F1632E;
-            border-radius: 20px 0px;
-        }
-
 .menuBar {
-    font-family: 'Bebas Neue', cursive;
     min-height: 41px;
     width: 100%;
     background-color: #F7B5A1;
@@ -111,22 +72,21 @@ body {
 .User {
     width: 450px;
     min-height: 80px;
-    background-color: #A64B4B;
+    background-color: #FFFFFF;
     float: right;
 }
 
     .User a {
-        font-family: 'Uncial Antiqua', cursive;
-        color: #FFF9C7;
+        color: #F1612B;
         text-decoration: none;
         padding: 10px;
-        border: 1px #A64B4B solid;
-        border-radius: 5px; /*Butonları Dikey Ortalamak ?*/
+        border: 1px #F1612B solid;
+        border-radius: 5px;
     }
 
         .User a:hover {
-            background-color: #FFF9C7;
-            color: #A64B4B;
+            background-color: #F1612B;
+            color: white;
         }
 
     .User label {
@@ -135,37 +95,65 @@ body {
 
 .Article {
     padding: 15px;
-    width: 800px;
+    width: 80%;
     float: left;
     margin-left: 10px;
-    margin-top: 20px;
 }
 
-    .Article img {
-        width: 800px;
+    .Article h2 {
+        color: #002F2F;
     }
 
-    .Article h2 {
-        color: #B5CC8B;
+    .Article img {
+        border-radius: 50%;
+    }
+
+.AdBanner {
+    width: 15%;
+    float: right;
+    vertical-align: middle;
+    margin-top: 150px;
+    border-radius: 50%;
+}
+
+    .AdBanner img {
+        border-radius: 50%;
     }
 
 .MainContainer {
     margin-top: 100px;
-    padding-top: 90px;
-    width: 1100px;
+    padding-top: 50px;
+    width: 100%;
     margin: 0px auto;
     min-height: 500px;
-    background-color: #807D63;
+    background-color: #E6E2AF;
 }
+
+.ContentContainer {
+    margin-top: 100px;
+    padding-top: 90px;
+    width: 90%;
+    margin: 0px auto;
+    min-height: 500px;
+    background-color: #EFECCA;
+}
+
+    .ContentContainer:after { /*DIV'AŞAĞI DEVAM EDER'*/
+        content: "";
+        visibility: hidden;
+        display: block;
+        height: 0px;
+        clear: both;
+    }
 
 .CategoryContainer {
     position: fixed;
-    margin-top: 20px;
+    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
-    width: 1100px;
-    background-color: #FFF9C7;
-    color: white;
+    width: 100%;
+    background-color: #F1612B;
+    color: #FFFFFF;
     min-height: 20px;
     text-align: center;
 }
@@ -175,17 +163,101 @@ body {
     }
 
         .CategoryContainer ul a li {
-            font-family: 'Bebas Neue', cursive;
             font-size: 16pt;
             text-decoration: none;
             float: left;
             padding: 10px;
-            background-color: #FFF9C7;
-            color: #A64B4B;
+            background-color: #F1612B;
+            color: white;
             text-align: center;
         }
 
             .CategoryContainer ul a li:hover {
-                background-color: #A64B4B;
-                color: #FFF9C7;
+                background-color: #EFECCA;
+                color: #046380;
+                border-left: 8px solid #13ACBA;
+                border-right: 8px solid #13ACBA;
             }
+
+.formContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #A6A4A6;
+    border-radius: 10px;
+    min-height: 500px;
+    background-color: #A7A37E;
+}
+
+    .formContainer label {
+        font-size: 16pt;
+        color: #002F2F;
+    }
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #A7A37E;
+}
+
+    /* li'leri yanyana gösterir */
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 18px;
+    }
+
+        /* li'ler arasına slash / koyar */
+        ul.breadcrumb li + li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        /* li'leri renklendirir */
+        ul.breadcrumb li a {
+            color: #F1612B;
+            text-decoration: none;
+        }
+
+            /* Hover edildiğinde renk değiştirir */
+            ul.breadcrumb li a:hover {
+                color: #EFECCA;
+                text-decoration: underline;
+            }
+.TextBox[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 200px;
+    box-sizing: border-box;
+}
+.TextBox[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 200px;
+    box-sizing: border-box;
+}
+.TextBox[type=Date] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 90px;
+    box-sizing: border-box;
+
+}
+.buton {
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #EFECCA;
+    margin-top: 15px;
+    padding: 12px;
+    display: block;
+    width: 20%;
+    color: #002F2F;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20pt;
+}
+    .buton:hover {
+        background-color: #002F2F;
+        color: #EFECCA;
+    }

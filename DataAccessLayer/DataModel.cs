@@ -388,8 +388,26 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                Makale m = dbConnection.QueryFirst<Makale>("SELECT ID, KategoriID,YoneticiID,Baslik,Ozet,TamIcerik,ThumbnailAdi,TamResimAdi,IsDeleted FROM Makaleler WHERE ID = @id", new { id });
+                Makale m = dbConnection.QueryFirst<Makale>("SELECT Mak.ID,Mak.KategoriID,Kat.KategoriAdi,Mak.YoneticiID,Yon.Adi,Yet.YetkiAdi,Mak.Baslik,Mak.Ozet,Mak.TamIcerik,Mak.ThumbnailAdi,Mak.TamResimAdi,Mak.YuklemeTarih,Mak.Okundu,Mak.IsDeleted FROM Makaleler AS Mak JOIN Yoneticiler AS Yon ON Mak.YoneticiID = Yon.ID JOIN Kategoriler AS Kat ON Mak.KategoriID = Kat.ID JOIN Yetkiler AS Yet ON Yon.YetkiID = Yet.ID WHERE Mak.ID = @id", new { id });
                 return m;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+        public List<Makale> GetMakalesByKategori(int katid)
+        {
+            try
+            {
+                dbConnection.Open();
+                List<Makale> makaleler = dbConnection.Query<Makale>("SELECT Mak.ID,Mak.KategoriID,Kat.KategoriAdi,Mak.YoneticiID,Yon.Adi,Yet.YetkiAdi,Mak.Baslik,Mak.Ozet,Mak.TamIcerik,Mak.ThumbnailAdi,Mak.TamResimAdi,Mak.YuklemeTarih,Mak.Okundu,Mak.IsDeleted FROM Makaleler AS Mak JOIN Yoneticiler AS Yon ON Mak.YoneticiID = Yon.ID JOIN Kategoriler AS Kat ON Mak.KategoriID = Kat.ID JOIN Yetkiler AS Yet ON Yon.YetkiID = Yet.ID WHERE Mak.KategoriID = @katid", new { katid }).ToList();
+                return makaleler;
             }
             catch (Exception)
             {
@@ -419,6 +437,111 @@ namespace DataAccessLayer
                 dbConnection.Close();
             }
         }
+
+        #endregion
+
+        #region Kullanıcı CRUD
+
+        public bool KullaniciEkle(Kullanici k)
+        {
+            try
+            {
+                dbConnection.Open();
+                dbConnection.Execute("INSERT INTO Kullanicilar(KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogumTarihi,IsDeleted) VALUES(@KullaniciAdi,@Eposta,@Sifre,@UyelikTarihi,@DogumTarihi,@IsDeleted)", k);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+
+        public bool KullaniciGuncelle(Kullanici k)
+        {
+            try
+            {
+                dbConnection.Open();
+                dbConnection.Execute("UPDATE Kullanicilar SET KullaniciAdi = @KullaniciAdi,Eposta = @Eposta,Sifre = @Sifre,IsDeleted = @IsDeleted WHERE ID = @ID", k);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+
+        public List<Kullanici> KullaniciListele(bool isDeleted)
+        {
+            try
+            {
+                dbConnection.Open();
+                List<Kullanici> kullanicilar = dbConnection.Query<Kullanici>("SELECT ID,KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogumTarihi,IsDeleted WHERE IsDeleted = @isDeleted", new { isDeleted }).ToList();
+                return kullanicilar;
+
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+
+
+        #endregion
+
+        #region Yorum CRUD
+        public bool YorumEkle(Yorum y)
+        {
+            try
+            {
+                dbConnection.Open();
+                dbConnection.Execute("INSERT INTO Yorumlar (MakaleID,KullaniciID,YorumIcerik,YorumTarihi,IsDeleted) VALUES(@MakaleID,@KullaniciID,@YorumIcerik,@YorumTarihi,@IsDeleted)", y);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+        public List<Yorum> YorumListele()
+        {
+            try
+            {
+                dbConnection.Open();
+                List<Yorum> yorumlar = dbConnection.Query<Yorum>("SELECT Yor.ID, Yor.MakaleID, Mak.MakaleAdi, Yor.KullaniciID, Kul.KullaniciAdi, Yor.YorumIcerik, Yor.YorumTarihi, Yor.IsDeleted FROM Yorumlar AS Yor JOIN Makaleler AS Mak ON Yor.MakaleID = Mak.ID JOIN Kullanicilar ON Mak.KullaniciID = Kul.ID WHERE Yor.IsDeleted = 0").ToList();
+                return yorumlar;
+
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+
 
         #endregion
     }
