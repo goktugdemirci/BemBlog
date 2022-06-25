@@ -1,0 +1,30 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "veksis.resourceName": {
+      "Name": "veksis.resourceName",
+      "Type": null,
+      "Value": "veksis"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "0c772f40-59ef-4ca5-83d4-15830fd4de07"
+    },
+    "veksis.subscriptionId": {
+      "Name": "veksis.subscriptionId",
+      "Type": "subscription",
+      "Value": "0c772f40-59ef-4ca5-83d4-15830fd4de07"
+    },
+    "veksis.resourceGroupLocation": {
+      "Name": "veksis.resourceGroupLocation",
+      "Type": null,
+      "Value": "northeurope"
+    },
+    "veksis.resourceGroupName": {
+      "Name": "veksis.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "kaynak-grubu"
+    }
+  }
+}

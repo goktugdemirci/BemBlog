@@ -11,7 +11,7 @@ namespace DataAccessLayer
 {
     public class DataModel
     {
-        IDbConnection dbConnection = new SqlConnection(ConnectionString.ConStrLocal);
+        IDbConnection dbConnection = new SqlConnection(ConnectionString.ConStrOnline);
 
         #region Validations
         public bool ValidEposta(string eposta)

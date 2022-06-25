@@ -142,8 +142,8 @@
         <ItemTemplate>
             <tr>
                 <td><%#Eval("KullaniciAdi") %></td>
-                <td><%#Eval("MakaleKategori") %></td>
-                <td><%#Eval("MakaleAdi") %></td>
+                <td><%#Eval("KategoriAdi") %></td>
+                <td><%#Eval("Baslik") %></td>
                 <td><%#Eval("YorumTarihi") %></td>
                 <td><%#Eval("YorumIcerik") %></td>
                 <td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>
@@ -155,8 +155,8 @@
         <AlternatingItemTemplate>
             <tr style="background-color: #F8BDA9">
                 <td><%#Eval("KullaniciAdi") %></td>
-                <td><%#Eval("MakaleKategori") %></td>
-                <td><%#Eval("MakaleAdi") %></td>
+                <td><%#Eval("KategoriAdi") %></td>
+                <td><%#Eval("Baslik") %></td>
                 <td><%#Eval("YorumTarihi") %></td>
                 <td><%#Eval("YorumIcerik") %></td>
                 <td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>

@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ListView runat="server" ID="lv_yorumlar" OnItemCommand="lv_yorumlar_ItemCommand">
         <LayoutTemplate>
-            <table class="table" cellspacing="0" style="width:650px;float:left;margin-left:10px;">
+            <table class="table" cellspacing="0" style="width:48%;float:left;margin-left:10px;">
                 <tr>
                     <th>KullanıcıAdı</th>
                     <th>Makale Kategorisi</th>
@@ -23,7 +23,7 @@
                 <td><%#Eval("KategoriAdi") %></td>
                 <td><%#Eval("Baslik") %></td>
                 <td><%#Eval("YorumTarihi") %></td>
-                <td><%#Eval("YorumIcerik").ToString().Substring(0,10) %></td>
+                <td><%#Eval("YorumIcerik") %></td>
                 <%--<td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>--%>
                 <td>
                     <asp:LinkButton ID="lbtn_aktifEt" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="aktif">AktifEt</asp:LinkButton>&nbsp;|&nbsp;<asp:LinkButton ID="lbtn_kaliciSil" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="kaliciSil">Sil</asp:LinkButton>
@@ -36,7 +36,7 @@
                 <td><%#Eval("KategoriAdi") %></td>
                 <td><%#Eval("Baslik") %></td>
                 <td><%#Eval("YorumTarihi") %></td>
-                <td><%#Eval("YorumIcerik").ToString().Substring(0,10) %></td>
+                <td><%#Eval("YorumIcerik") %></td>
                 <%--<td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>--%>
                 <td>
                     <asp:LinkButton ID="lbtn_aktifEt" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="aktif">AktifEt</asp:LinkButton>&nbsp;|&nbsp;<asp:LinkButton ID="lbtn_kaliciSil" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="kaliciSil">Sil</asp:LinkButton>
@@ -44,7 +44,7 @@
             </tr>
         </AlternatingItemTemplate>
         <EmptyDataTemplate>
-            <table class="table" cellspacing="0" style="width:650px;float:left;margin-left:10px;">
+            <table class="table" cellspacing="0" style="width:48%;float:left;margin-left:10px;">
                 <tr>
                     <th>KullanıcıAdı</th>
                     <th>Makale Kategorisi</th>
@@ -63,7 +63,7 @@
     </asp:ListView>
     <asp:ListView runat="server" ID="lv_aktifYorum" OnItemCommand="lv_aktifYorum_ItemCommand">
         <LayoutTemplate>
-            <table class="table" cellspacing="0" style="width:650px;float:right;margin:0px 10px;">
+            <table class="table" cellspacing="0" style="width:48%;float:right;margin:0px 10px;">
                 <tr>
                     <th>KullanıcıAdı</th>
                     <th>Makale Kategorisi</th>
@@ -83,7 +83,7 @@
                 <td><%#Eval("KategoriAdi") %></td>
                 <td><%#Eval("Baslik") %></td>
                 <td><%#Eval("YorumTarihi") %></td>
-                <td><%#Eval("YorumIcerik").ToString().Substring(0,10) %></td>
+                <td><%#Eval("YorumIcerik")%></td>
                 <%--<td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>--%>
                 <td>
                     <asp:LinkButton ID="lbtn_pasifEt" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="pasif">PasifEt</asp:LinkButton>&nbsp;|&nbsp;<asp:LinkButton ID="lbtn_kaliciSil" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="kaliciSil">Sil</asp:LinkButton>
@@ -96,7 +96,7 @@
                 <td><%#Eval("KategoriAdi") %></td>
                 <td><%#Eval("Baslik") %></td>
                 <td><%#Eval("YorumTarihi") %></td>
-                <td><%#Eval("YorumIcerik").ToString().Substring(0,10) %></td>
+                <td><%#Eval("YorumIcerik") %></td>
                 <%--<td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>--%>
                 <td>
                     <asp:LinkButton ID="lbtn_pasifEt" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="pasif">PasifEt</asp:LinkButton>&nbsp;|&nbsp;<asp:LinkButton ID="lbtn_kaliciSil" runat="server" CssClass="silButton" CommandArgument='<%# Eval("ID") %>' CommandName="kaliciSil">Sil</asp:LinkButton>
@@ -104,7 +104,7 @@
             </tr>   
         </AlternatingItemTemplate>
         <EmptyDataTemplate>
-            <table class="table" cellspacing="0" style="width:650px;float:left;margin-left:10px;">
+            <table class="table" cellspacing="0" style="width:48%;float:left;margin-left:10px;">
                 <tr>
                     <th>KullanıcıAdı</th>
                     <th>Makale Kategorisi</th>
