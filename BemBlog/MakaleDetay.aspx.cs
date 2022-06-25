@@ -34,11 +34,13 @@ namespace BemBlog
                     pnl_loggedin.Visible = false;
                     pnl_loggedout.Visible = true;
                 }
+
             }
             else
             {
                 Response.Redirect("Default.aspx");
             }
+
         }
 
         protected void lbtn_gonder_Click(object sender, EventArgs e)
@@ -50,7 +52,7 @@ namespace BemBlog
             Y.KullaniciAdi = ((Kullanici)Session["uye"]).KullaniciAdi;
             Y.YorumIcerik = tb_comment.Text;
             Y.YorumTarihi = DateTime.Now;
-            Y.IsDeleted = false;
+            Y.IsDeleted = true;
             if (dm.YorumEkle(Y))
             {
                 tb_comment.Text = "";

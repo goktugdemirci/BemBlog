@@ -7,3 +7,12 @@ C:\Users\GktgD\Documents\GitHub\BemBlog\DataAccessLayer\obj\Release\DataAccessLa
 C:\Users\GktgD\Documents\GitHub\BemBlog\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CopyComplete
 C:\Users\GktgD\Documents\GitHub\BemBlog\DataAccessLayer\obj\Release\DataAccessLayer.dll
 C:\Users\GktgD\Documents\GitHub\BemBlog\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\bin\Release\Dapper.dll
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\bin\Release\Dapper.xml
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Release\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CopyComplete
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\gkdmtgrc\Documents\GitHub\BemBlog\DataAccessLayer\obj\Release\DataAccessLayer.pdb

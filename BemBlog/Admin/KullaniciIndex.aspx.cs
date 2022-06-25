@@ -61,7 +61,7 @@ namespace BemBlog.Admin
             int id = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "pasifEt")
             {
-                if (dm.KullaniciGuncelle(id, true))
+                if (dm.KullaniciGuncelle(id, true)&&dm.YorumBanla(id))
                 {
                     Response.Redirect("KullaniciIndex.aspx");
 

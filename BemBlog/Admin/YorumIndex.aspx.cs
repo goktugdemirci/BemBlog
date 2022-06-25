@@ -13,26 +13,48 @@ namespace BemBlog.Admin
         DataModel dm = new DataModel();
         protected void Page_Load(object sender, EventArgs e)
         {
-            lv_yorumlar.DataSource = dm.YorumListele();
+            lv_yorumlar.DataSource = dm.YorumListele(true);
             lv_yorumlar.DataBind();
+            lv_aktifYorum.DataSource = dm.YorumListele(false);
+            lv_aktifYorum.DataBind();
         }
 
         protected void lv_yorumlar_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
             int id = Convert.ToInt32(e.CommandArgument);
-            if (e.CommandName == "sil")
+            if (e.CommandName == "aktif")
             {
-                //if (dm.YorumSil(id))
-                //{
-                //    Response.Redirect("AdminDefault.aspx");
-                //}
+                if (dm.YorumDurumGuncelle(id,false))
+                {
+                    Response.Redirect("YorumIndex.aspx");
+                }
             }
-            else if (e.CommandName == "onayla")
+            else if (e.CommandName == "kaliciSil")
             {
-                //if (dm.YorumSil(id))
-                //{
-                //    Response.Redirect("AdminDefault.aspx");
-                //}
+                if (dm.YorumKaliciSil(id))
+                {
+                    Response.Redirect("YorumIndex.aspx");
+                }
+            }
+        }
+
+        protected void lv_aktifYorum_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            int id = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "pasif")
+            {
+                if (dm.YorumDurumGuncelle(id, true))
+                {
+                    Response.Redirect("YorumIndex.aspx");
+                }
+            }
+            else if (e.CommandName == "kaliciSil")
+            {
+                if (dm.YorumKaliciSil(id))
+                {
+                    Response.Redirect("YorumIndex.aspx");
+                }
+            
             }
         }
     }

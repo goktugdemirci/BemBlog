@@ -115,6 +115,13 @@ body {
     border-radius: 11px;
     opacity: 0.8;
 }
+.yarimTable {
+    width: 400px;
+    border: 2px ridge #B76A64;
+    background-color: ghostwhite;
+    border-radius: 11px;
+    opacity: 0.8;
+}
 
     .table th {
         text-align: center;

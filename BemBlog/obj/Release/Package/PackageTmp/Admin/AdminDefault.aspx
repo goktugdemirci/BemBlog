@@ -141,7 +141,7 @@
         </LayoutTemplate>
         <ItemTemplate>
             <tr>
-                <td><%#Eval("KullaniciAdi") %>|<%#Eval("Adi") %></td>
+                <td><%#Eval("KullaniciAdi") %></td>
                 <td><%#Eval("MakaleKategori") %></td>
                 <td><%#Eval("MakaleAdi") %></td>
                 <td><%#Eval("YorumTarihi") %></td>
@@ -154,7 +154,7 @@
         </ItemTemplate>
         <AlternatingItemTemplate>
             <tr style="background-color: #F8BDA9">
-                <td><%#Eval("KullaniciAdi") %>|<%#Eval("Adi") %></td>
+                <td><%#Eval("KullaniciAdi") %></td>
                 <td><%#Eval("MakaleKategori") %></td>
                 <td><%#Eval("MakaleAdi") %></td>
                 <td><%#Eval("YorumTarihi") %></td>

@@ -11,7 +11,7 @@ namespace DataAccessLayer
 {
     public class DataModel
     {
-        IDbConnection dbConnection = new SqlConnection(ConnectionString.ConStr);
+        IDbConnection dbConnection = new SqlConnection(ConnectionString.ConStrLocal);
 
         #region Validations
         public bool ValidEposta(string eposta)
@@ -493,7 +493,7 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                dbConnection.Execute("DELETE FROM Kullanicilar WHERE ID=@id", new {id});
+                dbConnection.Execute("DELETE FROM Kullanicilar WHERE ID=@id", new { id });
                 return true;
             }
             catch (Exception)
@@ -610,7 +610,7 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                List<Yorum> yorumlar = dbConnection.Query<Yorum>("SELECT Yor.ID, Yor.MakaleID, Mak.MakaleAdi, Yor.KullaniciID, Kul.KullaniciAdi, Yor.YorumIcerik, Yor.YorumTarihi, Yor.IsDeleted FROM Yorumlar AS Yor JOIN Makaleler AS Mak ON Yor.MakaleID = Mak.ID JOIN Kullanicilar ON Mak.KullaniciID = Kul.ID WHERE Yor.IsDeleted = 0").ToList();
+                List<Yorum> yorumlar = dbConnection.Query<Yorum>("SELECT Yor.ID, Yor.MakaleID, Mak.Baslik, Yor.KullaniciID, Kul.KullaniciAdi, Yor.YorumIcerik, Kat.KategoriAdi,Yor.YorumTarihi, Yor.IsDeleted FROM Yorumlar AS Yor JOIN Makaleler AS Mak ON Yor.MakaleID = Mak.ID JOIN Kullanicilar AS Kul ON Yor.KullaniciID = Kul.ID JOIN Kategoriler AS Kat ON Mak.KategoriID= Kat.ID").ToList();
                 return yorumlar;
 
             }
@@ -629,7 +629,7 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                List<Yorum> yorumlar = dbConnection.Query<Yorum>("SELECT Yor.ID, Yor.MakaleID, Mak.MakaleAdi, Yor.KullaniciID, Kul.KullaniciAdi, Yor.YorumIcerik, Yor.YorumTarihi, Yor.IsDeleted FROM Yorumlar AS Yor JOIN Makaleler AS Mak ON Yor.MakaleID = Mak.ID JOIN Kullanicilar ON Mak.KullaniciID = Kul.ID WHERE Yor.IsDeleted = 0 AND Yor.MakaleID = @MakaleID", new {MakaleID=makid}).ToList();
+                List<Yorum> yorumlar = dbConnection.Query<Yorum>("SELECT Yor.ID, Yor.MakaleID, Mak.Baslik, Yor.KullaniciID, Kul.KullaniciAdi, Yor.YorumIcerik, Kat.KategoriAdi,Yor.YorumTarihi, Yor.IsDeleted FROM Yorumlar AS Yor JOIN Makaleler AS Mak ON Yor.MakaleID = Mak.ID JOIN Kullanicilar AS Kul ON Yor.KullaniciID = Kul.ID JOIN Kategoriler AS Kat ON Mak.KategoriID= Kat.ID WHERE Yor.IsDeleted = 0 AND Yor.MakaleID = @MakaleID", new { MakaleID = makid }).ToList();
                 return yorumlar;
 
             }
@@ -644,7 +644,83 @@ namespace DataAccessLayer
             }
         }
 
+        public List<Yorum> YorumListele(bool isDeleted)
+        {
+            try
+            {
+                dbConnection.Open();
+                List<Yorum> yorumlar = dbConnection.Query<Yorum>("SELECT Yor.ID, Yor.MakaleID, Mak.Baslik, Yor.KullaniciID, Kul.KullaniciAdi, Yor.YorumIcerik, Kat.KategoriAdi,Yor.YorumTarihi, Yor.IsDeleted FROM Yorumlar AS Yor JOIN Makaleler AS Mak ON Yor.MakaleID = Mak.ID JOIN Kullanicilar AS Kul ON Yor.KullaniciID = Kul.ID JOIN Kategoriler AS Kat ON Mak.KategoriID= Kat.ID WHERE Yor.IsDeleted = @IsDeleted", new { isDeleted }).ToList();
+                return yorumlar;
 
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+
+        public bool YorumDurumGuncelle(int id, bool isDeleted)
+        {
+            try
+            {
+                dbConnection.Open();
+                dbConnection.Execute("UPDATE Yorumlar SET IsDeleted = @IsDeleted WHERE ID = @ID", new { ID = id, IsDeleted = isDeleted });
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+        }
+        public bool YorumBanla(int KullaniciID)
+        {
+            try
+            {
+                dbConnection.Open();
+                dbConnection.Execute("UPDATE Yorumlar SET IsDeleted = 1 WHERE KullaniciID = @KullaniciID AND IsDeleted = 0", new { KullaniciID });
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
+
+
+        public bool YorumKaliciSil(int id)
+        {
+            try
+            {
+                dbConnection.Open();
+                dbConnection.Execute("DELETE FROM Yorumlar WHERE ID=@id", new { id });
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
         #endregion
     }
 }

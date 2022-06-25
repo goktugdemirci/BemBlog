@@ -28,7 +28,10 @@
                 <hr />
                 <br />
                 <img src="Images/<%#Eval("ThumbnailAdi")%>" style="margin-top: 5px; max-height: 250px; width: 20%; float: left;" />
-                <p style="float: right; width: 75%; margin-top: 75px;"><%# Eval("Ozet") %>&nbsp;<a href='MakaleDetay.aspx?makid=<%# Eval("ID") %>' style="text-decoration: none; color: #046380;">Devamını Oku..</a></p>
+                <p style="float: right; width: 75%; margin-top: 75px;">
+                    <%# Eval("Ozet") %>&nbsp;
+                    <a href='MakaleDetay.aspx?makid=<%# Eval("ID") %>' style="text-decoration: none; color: #046380;">Devamını Oku..</a>
+                </p>
 
             </div>
             <div class="AdBanner">
