@@ -49,7 +49,7 @@
                     <li class="menuItem">Makale Listesi</li>
                 </a>
 
-                <a href="#">
+                <a href="YorumIndex.aspx">
                     <li class="menuItem">Yorumlar Listesi</li>
                 </a>
             </ul>

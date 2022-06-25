@@ -14,6 +14,7 @@ namespace DataAccessLayer
         public string Sifre { get; set; }
         public DateTime UyelikTarihi { get; set; }
         public DateTime DogumTarihi { get; set; }
+        public int Yas { get; set; }
         public bool IsDeleted { get; set; }
     }
 }

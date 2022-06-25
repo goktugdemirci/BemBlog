@@ -11,88 +11,106 @@ namespace BemBlog
 {
 
 
-    public partial class MasterPage
+    public partial class MakaleDetay
     {
 
         /// <summary>
-        /// head control.
+        /// ltrl_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Literal ltrl_title;
 
         /// <summary>
-        /// form1 control.
+        /// ltrl_author control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Literal ltrl_author;
 
         /// <summary>
-        /// pnl_in control.
+        /// ltrl_category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_in;
+        protected global::System.Web.UI.WebControls.Literal ltrl_category;
 
         /// <summary>
-        /// lbl_user control.
+        /// img_max control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_user;
+        protected global::System.Web.UI.WebControls.Image img_max;
 
         /// <summary>
-        /// lbtn_duzenle control.
+        /// ltrl_content control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtn_duzenle;
+        protected global::System.Web.UI.WebControls.Literal ltrl_content;
 
         /// <summary>
-        /// lbtn_exit control.
+        /// lv_comments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtn_exit;
+        protected global::System.Web.UI.WebControls.ListView lv_comments;
 
         /// <summary>
-        /// pnl_out control.
+        /// pnl_loggedout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_out;
+        protected global::System.Web.UI.WebControls.Panel pnl_loggedout;
 
         /// <summary>
-        /// rp_categories control.
+        /// pnl_loggedin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rp_categories;
+        protected global::System.Web.UI.WebControls.Panel pnl_loggedin;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// lbl_mesaj control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label lbl_mesaj;
+
+        /// <summary>
+        /// tb_comment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_comment;
+
+        /// <summary>
+        /// lbtn_gonder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_gonder;
     }
 }

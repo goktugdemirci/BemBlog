@@ -22,8 +22,8 @@ namespace BemBlog
             {
                 pnl_out.Visible = false;
                 pnl_in.Visible = true;
-                Kullanici k = (Kullanici)Session["kullanici"];
-                lbl_user.Text = k.KullaniciAdi;
+                Kullanici k = (Kullanici)Session["uye"];
+                lbl_user.Text = $"Hoşgeldiniz {k.KullaniciAdi}";
             }
 
 
@@ -32,6 +32,12 @@ namespace BemBlog
         }
 
         protected void lbtn_exit_Click(object sender, EventArgs e)
+        {
+            Session["uye"] = null;
+            Response.Redirect("Default.aspx");
+        }
+
+        protected void lbtn_duzenle_Click(object sender, EventArgs e)
         {
 
         }

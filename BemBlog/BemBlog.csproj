@@ -257,6 +257,7 @@
     <Content Include="Admin\YoneticiGiris.aspx" />
     <Content Include="Admin\YoneticiGuncelle.aspx" />
     <Content Include="Admin\YoneticiIndex.aspx" />
+    <Content Include="Admin\YorumIndex.aspx" />
     <Content Include="CSS\AdminDefault.css" />
     <Content Include="CSS\AdminLogin.css" />
     <Content Include="CSS\Default.css" />
@@ -266,6 +267,7 @@
     <Content Include="Images\cat-computer.gif" />
     <Content Include="Images\noimage.png" />
     <Content Include="Images\settings.png" />
+    <Content Include="MakaleDetay.aspx" />
     <Content Include="Web.config" />
     <Content Include="YeniKayit.aspx" />
   </ItemGroup>
@@ -361,6 +363,13 @@
     <Compile Include="Admin\YoneticiIndex.aspx.designer.cs">
       <DependentUpon>YoneticiIndex.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\YorumIndex.aspx.cs">
+      <DependentUpon>YorumIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\YorumIndex.aspx.designer.cs">
+      <DependentUpon>YorumIndex.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -374,6 +383,13 @@
     </Compile>
     <Compile Include="GirisYap.aspx.designer.cs">
       <DependentUpon>GirisYap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakaleDetay.aspx.cs">
+      <DependentUpon>MakaleDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakaleDetay.aspx.designer.cs">
+      <DependentUpon>MakaleDetay.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
@@ -437,7 +453,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54811</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44326/</IISUrl>
+          <IISUrl>https://localhost:44329/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

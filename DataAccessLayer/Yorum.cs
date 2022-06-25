@@ -11,6 +11,7 @@ namespace DataAccessLayer
         public int ID { get; set; }
         public int MakaleID { get; set; }
         public string MakaleAdi { get; set; }
+        public string MakaleKategori { get; set; }
         public int KullaniciID { get; set; }
         public string KullaniciAdi { get; set; }
         public string YorumIcerik { get; set; }
