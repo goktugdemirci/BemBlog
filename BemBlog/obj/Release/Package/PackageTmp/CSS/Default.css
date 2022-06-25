@@ -1,0 +1,327 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15pt;
+    color: #002F2F;
+}
+
+.header {
+    position: fixed;
+    min-height: 50px;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+    .header img {
+        float: left;
+        width: 13%;
+        height: 80px;
+    }
+
+    .header label {
+        float: left;
+        color: #046380;
+        margin-top: 25px;
+        font-size: 20pt;
+    }
+
+.menuBar {
+    min-height: 41px;
+    width: 100%;
+    background-color: #F7B5A1;
+}
+
+    .menuBar ul {
+        list-style-type: none;
+    }
+
+    .menuBar a {
+        text-decoration: none;
+    }
+
+        .menuBar a:hover .menuItem {
+            background-color: #F1612B;
+            color: #FFF9C7;
+            border-bottom: 5px solid #13ACBA;
+        }
+
+        .menuBar a:hover .menuItem1 {
+            background-color: #F1612B;
+            color: #FFF9C7;
+            border-bottom: 5px solid #13ACBA;
+        }
+
+.menuItem {
+    color: #30B6C2;
+    font-weight: 300;
+    padding: 10px;
+    float: left;
+}
+
+.menuItem1 {
+    margin-left: 100px;
+    color: #30B6C2;
+    font-weight: 300;
+    padding: 10px;
+    float: left;
+}
+
+.User {
+    width: 450px;
+    min-height: 80px;
+    background-color: #FFFFFF;
+    float: right;
+}
+
+    .User a {
+        color: #F1612B;
+        text-decoration: none;
+        padding: 10px;
+        border: 1px #F1612B solid;
+        border-radius: 5px;
+    }
+
+        .User a:hover {
+            background-color: #F1612B;
+            color: white;
+        }
+
+    .User label {
+        font-family: 'Uncial Antiqua', cursive;
+    }
+
+.Article {
+    padding: 15px;
+    width: 80%;
+    float: left;
+    margin-left: 10px;
+}
+
+    .Article h2 {
+        color: #002F2F;
+    }
+
+    .Article img {
+        border-radius: 50%;
+    }
+
+.AdBanner {
+    width: 15%;
+    float: right;
+    vertical-align: middle;
+    margin-top: 150px;
+    border-radius: 50%;
+}
+
+    .AdBanner img {
+        border-radius: 50%;
+    }
+
+.MainContainer {
+    margin-top: 100px;
+    padding-top: 50px;
+    width: 100%;
+    margin: 0px auto;
+    min-height: 500px;
+    background-color: #E6E2AF;
+}
+
+.ContentContainer {
+    margin-top: 100px;
+    padding-top: 90px;
+    width: 90%;
+    margin: 0px auto;
+    min-height: 500px;
+    background-color: #EFECCA;
+}
+
+    .ContentContainer:after { /*DIV'AŞAĞI DEVAM EDER'*/
+        content: "";
+        visibility: hidden;
+        display: block;
+        height: 0px;
+        clear: both;
+    }
+
+.CategoryContainer {
+    position: fixed;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: #F1612B;
+    color: #FFFFFF;
+    min-height: 20px;
+    text-align: center;
+}
+
+    .CategoryContainer ul {
+        list-style-type: none;
+    }
+
+        .CategoryContainer ul a li {
+            font-size: 16pt;
+            text-decoration: none;
+            float: left;
+            padding: 10px;
+            background-color: #F1612B;
+            color: white;
+            text-align: center;
+        }
+
+            .CategoryContainer ul a li:hover {
+                background-color: #EFECCA;
+                color: #046380;
+                border-left: 8px solid #13ACBA;
+                border-right: 8px solid #13ACBA;
+            }
+
+.formContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #A6A4A6;
+    border-radius: 10px;
+    min-height: 500px;
+    background-color: #A7A37E;
+}
+
+    .formContainer label {
+        font-size: 16pt;
+        color: #002F2F;
+    }
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #A7A37E;
+}
+
+    /* li'leri yanyana gösterir */
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 18px;
+    }
+
+        /* li'ler arasına slash / koyar */
+        ul.breadcrumb li + li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        /* li'leri renklendirir */
+        ul.breadcrumb li a {
+            color: #F1612B;
+            text-decoration: none;
+        }
+
+            /* Hover edildiğinde renk değiştirir */
+            ul.breadcrumb li a:hover {
+                color: #EFECCA;
+                text-decoration: underline;
+            }
+
+.TextBox[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 200px;
+    box-sizing: border-box;
+}
+
+.TextBox[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 200px;
+    box-sizing: border-box;
+}
+
+.TextBox[type=Date] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 90px;
+    box-sizing: border-box;
+}
+
+.TextBox2 {
+    width: 80%;
+    min-height: 100px;
+    padding: 12px 20px;
+    margin: 8px 200px;
+    box-sizing: border-box;
+    border: 2px ridge dotted;
+    border-radius: 100px;
+}
+
+.buton {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EFECCA;
+    margin-top: 15px;
+    padding: 12px;
+    display: block;
+    width: 40%;
+    color: #002F2F;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20pt;
+}
+
+    .buton:hover {
+        background-color: #002F2F;
+        color: #EFECCA;
+    }
+
+.panel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    border: 3px ridge #13ACBA;
+    border-radius: 200px;
+    padding: 20px;
+    text-align: center;
+    min-height: 330px;
+}
+
+    .panel h3 {
+        margin-top: 20px;
+        color: #F1612B;
+    }
+
+.TextBoxLogin[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.TextBoxLogin[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.link {
+    text-decoration: none;
+    color: #F1612B;
+    font-size: 15pt;
+    margin-top: 60px;
+}
+
+    .link:hover {
+        text-decoration: underline;
+        color: #13ACBA;
+    }
+
+.infoLabel {
+    color:orangered;
+    text-align:center;
+    font-size:16pt;
+}

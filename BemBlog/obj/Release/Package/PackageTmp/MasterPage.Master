@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BemBlog.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="CSS/Default.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <a href="Default.aspx">
+                <img src="../Images/bem.png" /></a><div style="width:200px"></div>
+            <label></><\> 💻 ⌨️ 🖥 GELECEK BİLİŞİM'DE 🖥 ⌨️ 💻 <\></label>
+            <div class="User">
+                <asp:Panel ID="pnl_in" runat="server" Visible="false" Style="margin-top: 30px; float: right;">
+                    <asp:Label ID="lbl_user" runat="server"></asp:Label>
+                    <asp:LinkButton ID="lbtn_duzenle" runat="server" OnClick="lbtn_duzenle_Click">PROFILIM</asp:LinkButton>
+                    <asp:LinkButton ID="lbtn_exit" runat="server" OnClick="lbtn_exit_Click">EXIT</asp:LinkButton>
+                </asp:Panel>
+                <asp:Panel ID="pnl_out" runat="server" Visible="true" Style="margin-top: 30px; float: right;">
+                    <a href="GirisYap.aspx">Giriş Yap</a>
+                    <a href="YeniKayit.aspx">Kayıt Ol</a>
+                </asp:Panel>
+            </div>
+            <div class="CategoryContainer ">
+                <ul style="margin-left: 200px">
+                    <asp:Repeater ID="rp_categories" runat="server">
+                        <ItemTemplate>
+                            <div>
+                                <a href='Default.aspx?katid=<%# Eval("ID") %>'>
+                                    <li><%# Eval("KategoriAdi") %></li>
+                                </a>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ul>
+            </div>
+        </div>
+        <div class="MainContainer">
+
+            <div class="ContentContainer">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

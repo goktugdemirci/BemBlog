@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="BemBlog.Admin.AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../CSS/AdminDefault.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <a href="AdminDefault.aspx"><img src="../Images/bem.png" /></a>
+            
+            <div class="info">
+                <asp:Label ID="lbl_info" runat="server" />&nbsp;|&nbsp;
+                <asp:LinkButton ID="lbtn_exit" runat="server" Text="Çıkış" OnClick="lbtn_exit_Click" />
+            </div>
+        </div>
+        <div class="menuBar">
+            <ul>
+                <a href="YoneticiEkle.aspx">
+                    <li class="menuItem1">Yönetici Ekle</li>
+                </a>
+
+                <a href="KategoriEkle.aspx">
+                    <li class="menuItem">Kategori Ekle</li>
+                </a>
+
+                <a href="MakaleEkle.aspx">
+                    <li class="menuItem">Makale Ekle</li>
+                </a>
+
+                <a href="YoneticiIndex.aspx">
+                    <li class="menuItem">Yöneticiler Listesi</li>
+                </a>
+
+                <a href="KullaniciIndex.aspx">
+                    <li class="menuItem">Kullanıcılar Listesi</li>
+                </a>
+
+                <a href="KategoriIndex.aspx">
+                    <li class="menuItem">Kategori Listesi</li>
+                </a>
+
+                <a href="MakaleIndex.aspx">
+                    <li class="menuItem">Makale Listesi</li>
+                </a>
+
+                <a href="YorumIndex.aspx">
+                    <li class="menuItem">Yorumlar Listesi</li>
+                </a>
+            </ul>
+        </div>
+
+
+
+
+
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

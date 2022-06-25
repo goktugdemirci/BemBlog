@@ -1,0 +1,243 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+}
+
+.header {
+    font-family: 'Uncial Antiqua', cursive;
+    min-height: 80px;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+    .header img {
+        float: left;
+        width: 15%;
+        height: 80px;
+    }
+
+    .header h1 {
+        margin-left: 50px;
+        float: left;
+        margin-top: 20px;
+        color: #F2F2F2;
+    }
+
+    .header h3 {
+        float: left;
+        margin-top: 30px;
+        color: #F2F2F2;
+    }
+
+.info {
+    float: right;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+    .info label {
+        text-decoration: none;
+        color: #F1612B;
+        font-weight: 900;
+    }
+
+    .info a {
+        font-size: 14pt;
+        text-decoration: none;
+        color: #29B4C1;
+    }
+
+        .info a:hover {
+            padding: 10px 0px;
+            color: #F1632E;
+            border: 2px solid #F1632E;
+            border-radius: 20px 0px;
+        }
+
+.menuBar {
+    font-family: 'Bebas Neue', cursive;
+    min-height: 41px;
+    width: 100%;
+    background-color: #F7B5A1;
+}
+
+    .menuBar ul {
+        list-style-type: none;
+    }
+
+    .menuBar a {
+        text-decoration: none;
+    }
+
+        .menuBar a:hover .menuItem {
+            background-color: #F1612B;
+            color: #FFF9C7;
+            border-bottom: 5px solid #13ACBA;
+        }
+
+        .menuBar a:hover .menuItem1 {
+            background-color: #F1612B;
+            color: #FFF9C7;
+            border-bottom: 5px solid #13ACBA;
+        }
+
+.menuItem {
+    color: #30B6C2;
+    font-weight: 300;
+    padding: 10px;
+    float: left;
+}
+
+.menuItem1 {
+    margin-left: 100px;
+    color: #30B6C2;
+    font-weight: 300;
+    padding: 10px;
+    float: left;
+}
+
+.content {
+    background-color: #C7FFED;
+    width: 100%;
+    min-height: 600px;
+    padding-top: 10px;
+}
+
+.table {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px ridge #B76A64;
+    background-color: ghostwhite;
+    border-radius: 11px;
+    opacity: 0.8;
+}
+
+    .table th {
+        text-align: center;
+        border-bottom: 2px solid #B76A64;
+        padding: 8px;
+    }
+
+    .table tr td {
+        text-align: center;
+        padding: 8px;
+        border-bottom: 1px ridge silver;
+    }
+
+.silButton {
+    font-size: 10pt;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px;
+    color: wheat;
+    background-color: #13ACBA;
+}
+
+    .silButton:hover {
+        background-color: #F1612B;
+    }
+
+.guncButton {
+    font-size: 10pt;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px;
+    color: wheat;
+    background-color: #13ACBA;
+}
+
+    .guncButton:hover {
+        background-color: #F1612B;
+    }
+
+.formContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #A6A4A6;
+    border-radius: 10px;
+    min-height:500px;
+}
+
+    .formContainer label {
+        font-family: 'Comic Sans MS', cursive;
+        font-size: 15pt;
+        color: #3F3F3F;
+    }
+
+.textbox[type=text] {
+    font-size: 15pt;
+    padding: 5px;
+    width: 330px;
+    color: black;
+    background-color: #F5D5A6;
+    opacity: 0.7;
+    min-height: 10px;
+}
+
+.textbox[type=password] {
+    font-size: 15pt;
+    padding: 5px;
+    width: 330px;
+    color: black;
+    background-color: #F5D5A6;
+    opacity: 0.7;
+    min-height: 10px;
+}
+
+.textbox[type=text]:focus {
+    border: 3px solid #555;
+}
+
+.textbox[type=password]:focus {
+    border: 3px dashed #555;
+}
+
+.formButton {
+    margin-left: 20px;
+    background-color: #F1612B;
+    color: white;
+    font-size: 16pt;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 6px;
+    font-weight: 700;
+}
+
+    .formButton:hover {
+        background-color: #13ACBA;
+        color: white;
+        opacity: 1;
+    }
+
+.FloatClear:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.yarimForm {
+    padding:20px;
+    margin-top:20px;
+    width: 40%;
+    min-height: 400px;
+    border: 3px solid #F1612B;
+    border-radius: 12px;
+    float:left;
+}
+.hata {
+    background-color: #F25D50;
+    min-height: 20px;
+    padding: 10px;
+    color: #F7F7F7;
+    font-size: 14pt;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 15px;
+}
