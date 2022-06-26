@@ -11,88 +11,61 @@ namespace BemBlog
 {
 
 
-    public partial class MasterPage
+    public partial class Profilim
     {
 
         /// <summary>
-        /// head control.
+        /// tb_eposta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox tb_eposta;
 
         /// <summary>
-        /// form1 control.
+        /// tb_kullaniciAdi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox tb_kullaniciAdi;
 
         /// <summary>
-        /// pnl_in control.
+        /// dtp_dogumTarihi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_in;
+        protected global::System.Web.UI.WebControls.TextBox dtp_dogumTarihi;
 
         /// <summary>
-        /// lbl_user control.
+        /// tb_sifre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_user;
+        protected global::System.Web.UI.WebControls.TextBox tb_sifre;
 
         /// <summary>
-        /// lbtn_profilim control.
+        /// tb_sifre2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtn_profilim;
+        protected global::System.Web.UI.WebControls.TextBox tb_sifre2;
 
         /// <summary>
-        /// lbtn_exit control.
+        /// ltbn_profilGuncelle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtn_exit;
-
-        /// <summary>
-        /// pnl_out control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_out;
-
-        /// <summary>
-        /// rp_categories control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rp_categories;
-
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.LinkButton ltbn_profilGuncelle;
     }
 }

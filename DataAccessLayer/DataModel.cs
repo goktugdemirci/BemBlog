@@ -11,7 +11,7 @@ namespace DataAccessLayer
 {
     public class DataModel
     {
-        IDbConnection dbConnection = new SqlConnection(ConnectionString.ConStrOnline);
+        IDbConnection dbConnection = new SqlConnection(ConnectionString.ConStrLocal);
 
         #region Validations
         public bool ValidEposta(string eposta)
@@ -582,7 +582,25 @@ namespace DataAccessLayer
                 dbConnection.Close();
             }
         }
+        public Kullanici KullaniciGetir(int id)
+        {
+            try
+            {
+                dbConnection.Open();
+                Kullanici k = dbConnection.QueryFirstOrDefault<Kullanici>("SELECT ID,KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogumTarihi,IsDeleted FROM Kullanicilar WHERE ID = @id", new {id});
+                return k;
 
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
 
         #endregion
 

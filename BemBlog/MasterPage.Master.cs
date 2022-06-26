@@ -37,9 +37,10 @@ namespace BemBlog
             Response.Redirect("Default.aspx");
         }
 
-        protected void lbtn_duzenle_Click(object sender, EventArgs e)
+        protected void lbtn_profilim_Click(object sender, EventArgs e)
         {
-
+            Kullanici k = (Kullanici)Session["uye"];
+            Response.Redirect($"Profilim.aspx?uyeid={k.ID}");
         }
     }
 }

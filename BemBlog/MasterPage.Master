@@ -18,8 +18,8 @@
             <div class="User">
                 <asp:Panel ID="pnl_in" runat="server" Visible="false" Style="margin-top: 30px; float: right;">
                     <asp:Label ID="lbl_user" runat="server"></asp:Label>
-                    <asp:LinkButton ID="lbtn_duzenle" runat="server" OnClick="lbtn_duzenle_Click">PROFILIM</asp:LinkButton>
-                    <asp:LinkButton ID="lbtn_exit" runat="server" OnClick="lbtn_exit_Click">EXIT</asp:LinkButton>
+                    <asp:LinkButton ID="lbtn_profilim" onclick="lbtn_profilim_Click" runat="server">PROFILIM</asp:LinkButton>
+                    <asp:LinkButton ID="lbtn_exit" runat="server" OnClick="lbtn_exit_Click">Çıkış</asp:LinkButton>
                 </asp:Panel>
                 <asp:Panel ID="pnl_out" runat="server" Visible="true" Style="margin-top: 30px; float: right;">
                     <a href="GirisYap.aspx">Giriş Yap</a>
