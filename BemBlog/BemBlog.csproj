@@ -424,7 +424,6 @@
     <Content Include="Admin\ckeditor\SECURITY.md" />
     <Content Include="Admin\ckeditor\skins\moono-lisa\readme.md" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\veksis - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -432,7 +431,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
       <Project>{3613944a-6e23-4582-a672-76bb551b28a1}</Project>

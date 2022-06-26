@@ -378,7 +378,7 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                List<Makale> makaleler = dbConnection.Query<Makale>("SELECT Mak.ID,Mak.KategoriID,Kat.KategoriAdi,Mak.YoneticiID,Yon.Adi,Yet.YetkiAdi,Mak.Baslik,Mak.Ozet,Mak.TamIcerik,Mak.ThumbnailAdi,Mak.TamResimAdi,Mak.YuklemeTarih,Mak.Okundu,Mak.IsDeleted FROM Makaleler AS Mak JOIN Yoneticiler AS Yon ON Mak.YoneticiID = Yon.ID JOIN Kategoriler AS Kat ON Mak.KategoriID = Kat.ID JOIN Yetkiler AS Yet ON Yon.YetkiID = Yet.ID").ToList();
+                List<Makale> makaleler = dbConnection.Query<Makale>("SELECT Mak.ID,Mak.KategoriID,Kat.KategoriAdi,Mak.YoneticiID,Yon.Adi,Yet.YetkiAdi,Mak.Baslik,Mak.Ozet,Mak.TamIcerik,Mak.ThumbnailAdi,Mak.TamResimAdi,Mak.YuklemeTarih,Mak.Okundu,Mak.IsDeleted FROM Makaleler AS Mak JOIN Yoneticiler AS Yon ON Mak.YoneticiID = Yon.ID JOIN Kategoriler AS Kat ON Mak.KategoriID = Kat.ID JOIN Yetkiler AS Yet ON Yon.YetkiID = Yet.ID WHERE Mak.IsDeleted =0").ToList();
                 return makaleler;
 
             }
