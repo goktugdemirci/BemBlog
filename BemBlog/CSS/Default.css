@@ -4,10 +4,14 @@
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Staatliches', cursive;
     font-size: 15pt;
     color: #002F2F;
 }
-
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
 .header {
     position: fixed;
     min-height: 50px;

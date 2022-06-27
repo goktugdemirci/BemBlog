@@ -100,7 +100,7 @@ body {
 }
 
 .content {
-    background-color: #C7FFED;
+    background-image:url('../Images/bg1.jpg');
     width: 100%;
     min-height: 600px;
     padding-top: 10px;
@@ -113,8 +113,11 @@ body {
     border: 2px ridge #B76A64;
     background-color: ghostwhite;
     border-radius: 11px;
-    opacity: 0.8;
+    opacity: 0.6;
 }
+    .table:hover {
+        opacity: 0.9;
+    }
 .yarimTable {
     width: 400px;
     border: 2px ridge #B76A64;
@@ -214,6 +217,7 @@ body {
     border-radius: 6px;
     padding: 6px;
     font-weight: 700;
+    opacity: 1 !important;
 }
 
     .formButton:hover {

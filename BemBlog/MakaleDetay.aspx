@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="MakaleDetay.aspx.cs" Inherits="BemBlog.MakaleDetay" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="Article">
@@ -15,7 +18,7 @@
         </div>
         <hr />
         <br />
-        <asp:Image ID="img_max" runat="server" Style="width: 250px;" />
+        <asp:Image ID="img_max" runat="server" Style="width: 800px; max-height: 300px; border-radius: 0px !important;" />
         <br />
         <asp:Literal ID="ltrl_content" runat="server"></asp:Literal>
         <br />
@@ -31,6 +34,7 @@
                 <ItemTemplate>
                     <label>Kullanıcı Adı : </label>
                     &nbsp:&nbsp<%# Eval("KullaniciAdi") %>
+                    <br />
                     <br />
                     <%# Eval("YorumIcerik") %>
                     <br />

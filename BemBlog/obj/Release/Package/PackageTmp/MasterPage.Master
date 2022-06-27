@@ -5,6 +5,8 @@
 <html>
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="Fonts/Roboto/Roboto-Light.ttf" rel="stylesheet" />    
     <link href="CSS/Default.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -13,12 +15,16 @@
     <form id="form1" runat="server">
         <div class="header">
             <a href="Default.aspx">
-                <img src="../Images/bem.png" /></a><div style="width:200px"></div>
-            <label></><\> 💻 ⌨️ 🖥 GELECEK BİLİŞİM'DE 🖥 ⌨️ 💻 <\></label>
+                <img src="../Images/bem.png" title="Bilişim Eğitim Merkezi"/></a><div style="width: 200px"></div>
+            <label></><\> <span class="material-symbols-outlined">
+computer
+</span> GELECEK BİLİŞİM'DE <span class="material-symbols-outlined">
+computer
+</span> <\></label>
             <div class="User">
                 <asp:Panel ID="pnl_in" runat="server" Visible="false" Style="margin-top: 30px; float: right;">
                     <asp:Label ID="lbl_user" runat="server"></asp:Label>
-                    <asp:LinkButton ID="lbtn_profilim" onclick="lbtn_profilim_Click" runat="server">PROFILIM</asp:LinkButton>
+                    <asp:LinkButton ID="lbtn_profilim" OnClick="lbtn_profilim_Click" runat="server">PROFILIM</asp:LinkButton>
                     <asp:LinkButton ID="lbtn_exit" runat="server" OnClick="lbtn_exit_Click">Çıkış</asp:LinkButton>
                 </asp:Panel>
                 <asp:Panel ID="pnl_out" runat="server" Visible="true" Style="margin-top: 30px; float: right;">
@@ -43,8 +49,8 @@
         <div class="MainContainer">
 
             <div class="ContentContainer">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
             </div>
         </div>
     </form>

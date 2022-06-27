@@ -35,7 +35,7 @@ namespace BemBlog
             k.IsDeleted = true;
             if (dm.KullaniciEkle(k))
             {
-                Response.Redirect("Default.aspx");
+                Response.Redirect("GirisYap.aspx");
             }
             else
             {
