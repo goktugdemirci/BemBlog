@@ -16,7 +16,7 @@
         <div class="tasiyici">
             <div class="panel">
                 <img src="../Images/bem.png" alt="resimYazisi" />
-                <h3 style="font-size: 30pt;">Yönetici Girişi</h3>
+                <h3 style="font-size: 30pt;">Admin Login</h3>
                 <hr style="color: #F7F7F7; margin-top: 15px;" />
                 <asp:Panel ID="pnl_mesaj" runat="server" CssClass="hata" Visible="false">
                     <asp:Label ID="lbl_hata" runat="server"></asp:Label>
